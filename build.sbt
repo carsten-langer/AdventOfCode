@@ -2,6 +2,9 @@ lazy val root = (project in file("."))
   .settings(
     name := "AdventOfCode",
   )
+  .aggregate(base)
+
+lazy val base = project
 
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
