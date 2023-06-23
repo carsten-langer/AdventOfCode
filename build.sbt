@@ -2,9 +2,10 @@ lazy val root = (project in file("."))
   .settings(
     name := "AdventOfCode",
   )
-  .aggregate(base)
+  .aggregate(base, aoc21)
 
 lazy val base = project
+lazy val aoc21 = project.dependsOn(base % "compile->compile; test->test")
 
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
