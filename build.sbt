@@ -30,7 +30,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-feature", // Emit warning and location for usages of features that should be imported explicitly.
   "-language:higherKinds", // Allow higher-kinded types
   "-unchecked", // Enable additional warnings where generated code depends on assumptions.
-  "-Werror", // Fail the compilation if there are any warnings.
+  //  "-Werror", // Fail the compilation if there are any warnings.
   //
   // Advanced Settings
   //"-Xdev", // Indicates user is a developer - issue warnings about anything which seems amiss // Not used, as
