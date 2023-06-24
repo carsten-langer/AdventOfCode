@@ -22,8 +22,8 @@ abstract case class AoCSpec[A, B](puzzle: Puzzle[A, B])
   def doTest(part: Part, inputType: InputType, expectedResult: B): Assertion = {
     val input = inputLines(inputType)
     part match {
-      case Part1 => puzzle.solvePart1(input) shouldEqual expectedResult
-      case Part2 => puzzle.solvePart2(input) shouldEqual expectedResult
+      case Part1 => puzzle.solvePart1FromLines(input) shouldEqual expectedResult
+      case Part2 => puzzle.solvePart2FromLines(input) shouldEqual expectedResult
     }
   }
 
