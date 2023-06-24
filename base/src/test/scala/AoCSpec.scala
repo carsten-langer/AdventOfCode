@@ -29,8 +29,8 @@ abstract case class AoCSpec[A, B](puzzle: Puzzle[A, B])
 
   private def inputLines(inputType: InputType): Iterable[String] = {
     val puzzleClass = puzzle.getClass
-    val day = puzzleClass.getSimpleName.init.toLowerCase
-    val resourceName = s"${day}_${inputType.suffix}.txt"
+    val day = puzzleClass.getSimpleName.slice(3, 5)
+    val resourceName = s"day${day}_${inputType.suffix}.txt"
     val source = Source.fromResource(resourceName)
     source.getLines().iterator.to(Iterable)
   }
